@@ -4,6 +4,8 @@ import { CssTheme } from '@kibalabs/ui-react';
 import { Toaster } from 'react-hot-toast';
 import './toasts.css';
 
+// NOTE(krishan711): the css is not being exported to the dist so either need to fix that
+// or figure out a nicer way to structure the animations and get that into the theme or similar
 export interface IKeyFrames extends Record<number, Readonly<CssTheme>> {
   0: CssTheme;
   100: CssTheme;
