@@ -1,0 +1,43 @@
+{
+  "name": "@kibalabs/ui-react-toast",
+  "version": "0.1.0",
+  "description": "React UI component for toast",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kibalabs/ui-react-toast.git"
+  },
+  "homepage": "https://ui-react-toast-docs.kibalabs.com",
+  "bugs": "https://github.com/kibalabs/ui-react-toast/issues",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "@kibalabs/core": "^0.6.1",
+    "@kibalabs/core-react": "^0.9.4",
+    "@kibalabs/ui-react": "^0.11.0-next.48",
+    "react-hot-toast": "^2.4.0"
+  },
+  "devDependencies": {
+    "@kibalabs/build": "0.13.0",
+    "@storybook/addon-essentials": "7.0.2",
+    "@storybook/addon-links": "7.0.2",
+    "@storybook/react": "7.0.2",
+    "@storybook/react-webpack5": "7.0.2",
+    "@types/react": "18.0.34",
+    "@types/react-dom": "18.0.11",
+    "@types/styled-components": "5.1.26",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "^7.0.2",
+    "styled-components": "5.3.9"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 ",
+    "react-dom": "^17.0.0 || ^18.0.0 ",
+    "styled-components": "^5.3.1"
+  }
+}
