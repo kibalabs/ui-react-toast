@@ -1,5 +1,5 @@
-import { generateUUID } from "@kibalabs/core";
-import { CssTheme, themeToCss } from "@kibalabs/ui-react";
+import { generateUUID } from '@kibalabs/core';
+import { CssTheme, themeToCss } from '@kibalabs/ui-react';
 
 // NOTE(krishan711): the css is not being exported to the dist so either need to fix that
 // or figure out a nicer way to structure the animations and get that into the theme or similar
@@ -39,14 +39,14 @@ const fadeOutKeyFrames: IKeyFrames = {
   },
 };
 
-// eslint-disable-next-line unused-imports/no-unused-vars
+
 const animationIn: Animation = {
   keyframes: fadeInKeyFrames,
   duration: '0.35s',
   timingFunction: 'cubic-bezier(0.21, 1.02, 0.73, 1)',
 };
 
-// eslint-disable-next-line unused-imports/no-unused-vars
+
 const animationOut: Animation = {
   keyframes: fadeOutKeyFrames,
   duration: '0.75s',
@@ -60,9 +60,8 @@ export const keyFramesToCss = (keyFrames: IKeyFrames): string => {
     // if (current === '0' || current === '100') {
     //   return output;
     // }
-    return `${accumulator}\n${current}% {${themeToCss(keyFrames[current])}}`
+    return `${accumulator}\n${current}% {${themeToCss(keyFrames[current])}}`;
   }, '');
-  console.log('output', output);
   return output;
 };
 
@@ -82,9 +81,7 @@ export const animationToCss = (animation: Animation): string => {
     output += `animation-iteration-count: ${animation.iterationCount};`;
   }
   return output;
-}
+};
 
 export const animationInCss = animationToCss(animationIn);
-console.log('animationInCss' , animationInCss)
 export const animationOutCss = animationToCss(animationOut);
-console.log('animationOutCss' , animationOutCss)
