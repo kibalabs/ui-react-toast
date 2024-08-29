@@ -2,7 +2,7 @@ import React from 'react';
 
 import { getClassName, RecursivePartial } from '@kibalabs/core';
 import { Link as CoreLink, ISingleAnyChildProps, useIsCoreRoutingEnabled } from '@kibalabs/core-react';
-import { defaultComponentProps, IComponentProps, themeToCss } from '@kibalabs/ui-react';
+import { IComponentProps, themeToCss } from '@kibalabs/ui-react';
 import styled from 'styled-components';
 
 import { IToastTheme } from './theme';
@@ -69,7 +69,11 @@ export interface IToastProps extends IComponentProps<IToastTheme>, ISingleAnyChi
   onClicked?(): void;
 }
 
-export const Toast = (props: IToastProps): React.ReactElement => {
+export function Toast({
+  className = '',
+  variant = 'default',
+  ...props
+}: IToastProps): React.ReactElement {
   const isUsingCoreRouting = useIsCoreRoutingEnabled();
 
   const onClicked = (event: React.SyntheticEvent): void => {
@@ -87,7 +91,7 @@ export const Toast = (props: IToastProps): React.ReactElement => {
     // @ts-ignore: as prop doesn't match type required
     <StyledToast
       id={props.id}
-      className={getClassName(Toast.displayName, props.className, ...(props.variant?.split('-') || []))}
+      className={getClassName(Toast.displayName, className, ...(variant?.split('-') || []))}
       $theme={props.theme}
       $isClickable={props.target != null || props.onClicked != null}
       onClick={onClicked}
@@ -102,9 +106,5 @@ export const Toast = (props: IToastProps): React.ReactElement => {
       </StyledToastFocusFixer>
     </StyledToast>
   );
-};
-
+}
 Toast.displayName = 'KibaToast';
-Toast.defaultProps = {
-  ...defaultComponentProps,
-};

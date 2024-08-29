@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast';
 // or figure out a nicer way to structure the animations and get that into the theme or similar
 // import './toasts.css';
 
-export const ToastContainer = (): React.ReactElement => {
+export function ToastContainer(): React.ReactElement {
   // const dimensions = useDimensions();
   return (
     <Toaster
@@ -16,4 +16,4 @@ export const ToastContainer = (): React.ReactElement => {
       containerStyle={{}}
     />
   );
-};
+}
