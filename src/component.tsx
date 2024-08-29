@@ -69,7 +69,7 @@ export interface IToastProps extends IComponentProps<IToastTheme>, ISingleAnyChi
   onClicked?(): void;
 }
 
-export const Toast = (props: IToastProps): React.ReactElement => {
+export function Toast(props: IToastProps): React.ReactElement {
   const isUsingCoreRouting = useIsCoreRoutingEnabled();
 
   const onClicked = (event: React.SyntheticEvent): void => {
@@ -102,7 +102,7 @@ export const Toast = (props: IToastProps): React.ReactElement => {
       </StyledToastFocusFixer>
     </StyledToast>
   );
-};
+}
 
 Toast.displayName = 'KibaToast';
 Toast.defaultProps = {
