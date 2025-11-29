@@ -37,7 +37,7 @@
     "storybook": "10.1.2"
   },
   "peerDependencies": {
-    "@kibalabs/ui-react": ">=0.11.2 || >=0.11.3-next",
+    "@kibalabs/ui-react": ">=0.11.3-next.18",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
   }

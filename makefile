@@ -1,8 +1,8 @@
 install:
-	@ npm ci --legacy-peer-deps
+	@ npm ci
 
 install-updates:
-	@ npm install --legacy-peer-deps
+	@ npm install
 
 list-outdated: install
 	@ npm outdated
