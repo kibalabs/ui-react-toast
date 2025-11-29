@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - [MAJOR] Converted package into an es-module
 
 ### Changed
+- [MAJOR] Upgraded to Storybook 10
+- [MAJOR] Updated to work with ui-react v0.11.3 and above (CSS-based theming)
+- [MINOR] Updated Dockerfiles to Node 24 LTS
 
 ### Removed
 

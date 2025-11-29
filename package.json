@@ -21,22 +21,20 @@
   ],
   "dependencies": {
     "@kibalabs/core": "^0.6.3-next.4",
-    "@kibalabs/core-react": "^0.9.7-next.1",
+    "@kibalabs/core-react": "^0.9.7-next.2",
     "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
-    "@kibalabs/build": "file:../build-js",
-    "@kibalabs/ui-react": "file:../ui-react",
-    "@storybook/addon-essentials": "8.6.4",
-    "@storybook/addon-links": "8.6.4",
-    "@storybook/blocks": "8.6.4",
-    "@storybook/react": "8.6.4",
-    "@storybook/react-vite": "^8.6.4",
+    "@kibalabs/build": "0.13.3-next.12",
+    "@kibalabs/ui-react": "0.11.3-next.18",
+    "@storybook/addon-docs": "10.1.2",
+    "@storybook/react-vite": "10.1.2",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "storybook": "8.6.4"
+    "remark-gfm": "4.0.1",
+    "storybook": "10.1.2"
   },
   "peerDependencies": {
     "@kibalabs/ui-react": ">=0.11.2 || >=0.11.3-next",
