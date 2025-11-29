@@ -1,4 +1,4 @@
-export default config = {
+const config = {
   framework: {
     name: '@storybook/react-vite',
   },
@@ -17,3 +17,5 @@ export default config = {
     autodocs: true,
   },
 };
+
+export default config;
