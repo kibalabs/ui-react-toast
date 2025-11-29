@@ -37,7 +37,7 @@ export const useToastManager = (): IToastManager => {
   const showTextToast = React.useCallback((text: string, toastVariant?: string, toastId?: string, shouldNotAutoClose?: boolean, autoCloseSeconds?: number, onClicked?: (() => void)): string => {
     const actualComponent = (
       <Text>{text}</Text>
-    );
+    ) as React.ReactElement;
     return showToast(actualComponent, toastVariant, toastId, shouldNotAutoClose, autoCloseSeconds, onClicked);
   }, [showToast]);
 

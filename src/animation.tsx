@@ -1,5 +1,10 @@
 import { generateUUID } from '@kibalabs/core';
-import { CssTheme, themeToCss } from '@kibalabs/ui-react';
+
+type CssTheme = Record<string, string>;
+
+const themeToCss = (theme: CssTheme): string => {
+  return Object.entries(theme).map(([key, value]) => `${key}: ${value};`).join(' ');
+};
 
 // NOTE(krishan711): the css is not being exported to the dist so either need to fix that
 // or figure out a nicer way to structure the animations and get that into the theme or similar
