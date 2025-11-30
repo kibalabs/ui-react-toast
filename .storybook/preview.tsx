@@ -1,7 +1,10 @@
+import React from 'react';
+
 import type { Preview } from '@storybook/react-vite';
-import '@kibalabs/ui-react/styles/reset';
-import '@kibalabs/ui-react/styles/colors';
+
+import '@kibalabs/ui-react/dist/index.css';
 import '../src/styles.scss';
+import { ToastContainer } from '../src';
 
 const preview: Preview = {
   parameters: {
@@ -13,6 +16,14 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <React.Fragment>
+        <ToastContainer />
+        <Story />
+      </React.Fragment>
+    ),
+  ],
 };
 
 export default preview;

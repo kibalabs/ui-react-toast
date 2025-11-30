@@ -1,3 +1,12 @@
+// Override react-hot-toast default styles - must be outside @layer for higher specificity
+.KibaToastContainer > div {
+  max-width: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
 @layer kiba-structure {
   @keyframes kiba-toast-fade-in {
     0% {
@@ -24,6 +33,11 @@
   .KibaToast {
     display: flex;
     transition-duration: 0.3s;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: default;
     &.clickable {
       cursor: pointer;
     }
@@ -41,13 +55,54 @@
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    box-sizing: border-box;
   }
 }
 
 @layer kiba-theme {
   .KibaToast {
-    .KibaToastFocusFixer {
+    > .KibaToastFocusFixer {
+      // Use same styling as card from ui-react
+      background-color: var(--kiba-color-background-light10, #ffffff);
+      border-color: var(--kiba-color-background-dark05, rgba(0, 0, 0, 0.05));
+      border-width: var(--kiba-border-width, 1px);
+      border-style: solid;
+      border-radius: var(--kiba-border-radius, 0.5em);
+      box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.15);
+      padding: var(--kiba-padding, 0.5em) var(--kiba-padding-wide, 1em);
+      color: var(--kiba-color-text, #333333);
       transition-duration: 0.3s;
+    }
+    &:hover > .KibaToastFocusFixer {
+      background-color: var(--kiba-color-background, #ffffff);
+    }
+    &:active > .KibaToastFocusFixer {
+      background-color: var(--kiba-color-background-dark10, #f0f0f0);
+    }
+    &:focus > .KibaToastFocusFixer {
+      border-color: var(--kiba-color-background-dark50, rgba(0, 0, 0, 0.5));
+    }
+    // Variant styles
+    &.success > .KibaToastFocusFixer {
+      background-color: var(--kiba-color-success-clear90, #d4edda);
+      color: var(--kiba-color-success-dark25, #155724);
+      border-color: var(--kiba-color-success-clear75, #c3e6cb);
+    }
+    &.error > .KibaToastFocusFixer {
+      background-color: var(--kiba-color-error-clear90, #f8d7da);
+      color: var(--kiba-color-error-dark25, #721c24);
+      border-color: var(--kiba-color-error-clear75, #f5c6cb);
+    }
+    &.warning > .KibaToastFocusFixer {
+      background-color: var(--kiba-color-warning-clear90, #fff3cd);
+      color: var(--kiba-color-warning-dark25, #856404);
+      border-color: var(--kiba-color-warning-clear75, #ffeeba);
+    }
+    &.info > .KibaToastFocusFixer {
+      background-color: var(--kiba-color-info-clear90, #d1ecf1);
+      color: var(--kiba-color-info-dark25, #0c5460);
+      border-color: var(--kiba-color-info-clear75, #bee5eb);
     }
   }
 }
