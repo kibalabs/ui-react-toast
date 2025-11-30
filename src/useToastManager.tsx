@@ -23,7 +23,7 @@ export const useToastManager = (): IToastManager => {
       // @ts-expect-error: not sure why classNam isn't expected on the component?
       React.cloneElement(component, { ...component.props, className: getClassName(...component.className || '', renderingToast.visible ? 'animateIn' : 'animateOut') })
     );
-    toast.custom(wrappedComponent, { id: actualToastId, duration: shouldAutoClose ? autoCloseMillis : Infinity, style: { padding: '0' } });
+    toast.custom(wrappedComponent, { id: actualToastId, duration: shouldAutoClose ? autoCloseMillis : Infinity, style: { padding: '0', background: 'none', boxShadow: 'none' } });
     return actualToastId;
   }, []);
 

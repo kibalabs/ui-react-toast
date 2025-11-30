@@ -1,3 +1,12 @@
+// Override react-hot-toast default styles - must be outside @layer for higher specificity
+.KibaToastContainer > div {
+  max-width: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
 @layer kiba-structure {
   @keyframes kiba-toast-fade-in {
     0% {
@@ -19,11 +28,6 @@
       transform: translate3d(0, -150%, -1px) scale(0.6);
       opacity: 0;
     }
-  }
-
-  // Override react-hot-toast default styles
-  .KibaToastContainer > div {
-    max-width: none !important;
   }
 
   .KibaToast {
