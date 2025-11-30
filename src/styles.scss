@@ -21,9 +21,15 @@
     }
   }
 
+  // Override react-hot-toast default styles
+  .KibaToastContainer > div {
+    max-width: none !important;
+  }
+
   .KibaToast {
     display: flex;
     transition-duration: 0.3s;
+    white-space: nowrap;
     &.clickable {
       cursor: pointer;
     }
@@ -46,6 +52,27 @@
 
 @layer kiba-theme {
   .KibaToast {
+    padding: var(--kiba-toast-padding, 0.75em 1em);
+    background-color: var(--kiba-toast-background-color, #ffffff);
+    border-radius: var(--kiba-toast-border-radius, 0.5em);
+    box-shadow: var(--kiba-toast-box-shadow, 0 3px 10px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.05));
+    color: var(--kiba-toast-color, #333333);
+    &.success {
+      background-color: var(--kiba-toast-success-background-color, #d4edda);
+      color: var(--kiba-toast-success-color, #155724);
+    }
+    &.error {
+      background-color: var(--kiba-toast-error-background-color, #f8d7da);
+      color: var(--kiba-toast-error-color, #721c24);
+    }
+    &.warning {
+      background-color: var(--kiba-toast-warning-background-color, #fff3cd);
+      color: var(--kiba-toast-warning-color, #856404);
+    }
+    &.info {
+      background-color: var(--kiba-toast-info-background-color, #d1ecf1);
+      color: var(--kiba-toast-info-color, #0c5460);
+    }
     .KibaToastFocusFixer {
       transition-duration: 0.3s;
     }
