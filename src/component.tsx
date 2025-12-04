@@ -35,12 +35,6 @@ export function Toast({
 
   const toastClassName = getClassName(Toast.displayName, className, isClickable && 'clickable', ...(variant?.split('-') || []));
 
-  const innerContent = (
-    <span className='KibaToastFocusFixer' tabIndex={-1}>
-      {props.children}
-    </span>
-  );
-
   if (props.target) {
     if (isUsingCoreRouting && targetShouldOpenSameTab && isTargetWithinApp) {
       return (
@@ -51,7 +45,7 @@ export function Toast({
           onClick={onClicked}
           tabIndex={props.tabIndex || 0}
         >
-          {innerContent}
+          {props.children}
         </CoreLink>
       );
     }
@@ -65,7 +59,7 @@ export function Toast({
         onClick={onClicked}
         tabIndex={props.tabIndex || 0}
       >
-        {innerContent}
+        {props.children}
       </a>
     );
   }
@@ -79,7 +73,7 @@ export function Toast({
         tabIndex={props.tabIndex || 0}
         type='button'
       >
-        {innerContent}
+        {props.children}
       </button>
     );
   }
@@ -90,7 +84,7 @@ export function Toast({
       className={toastClassName}
       tabIndex={props.tabIndex || 0}
     >
-      {innerContent}
+      {props.children}
     </div>
   );
 }
