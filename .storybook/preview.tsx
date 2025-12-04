@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { Preview } from '@storybook/react-vite';
 
-import '@kibalabs/ui-react/dist/index.css';
+import '@kibalabs/ui-react/styles.css';
 import '../src/styles.scss';
 import { ToastContainer } from '../src';
 
