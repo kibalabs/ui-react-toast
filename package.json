@@ -29,13 +29,13 @@
     "src/styles.scss"
   ],
   "dependencies": {
-    "@kibalabs/core": "^0.7.2-next.4",
-    "@kibalabs/core-react": "^0.10.1-next.2",
+    "@kibalabs/core": "^0.7.2-next.5",
+    "@kibalabs/core-react": "^0.10.1-next.4",
     "react-hot-toast": "^2.6.1"
   },
   "devDependencies": {
     "@kibalabs/build": "0.14.1",
-    "@kibalabs/ui-react": "^0.12.1-next.7",
+    "@kibalabs/ui-react": "^0.12.1-next.8",
     "@storybook/addon-docs": "10.6.1",
     "@storybook/react-vite": "10.6.1",
     "@types/react": "19.3.0",
@@ -46,7 +46,7 @@
     "storybook": "10.6.1"
   },
   "peerDependencies": {
-    "@kibalabs/ui-react": ">=0.12.0",
+    "@kibalabs/ui-react": ">=0.12.1-next.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
